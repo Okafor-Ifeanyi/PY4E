@@ -1,0 +1,233 @@
+import xml.etree.ElementTree as ET
+
+input = """<commentinfo>
+<note>This file contains the actual data for your assignment - good luck!</note>
+<comments>
+<comment>
+<name>Rai</name>
+<count>96</count>
+</comment>
+<comment>
+<name>Ryhs</name>
+<count>96</count>
+</comment>
+<comment>
+<name>Eabha</name>
+<count>95</count>
+</comment>
+<comment>
+<name>Jacqui</name>
+<count>89</count>
+</comment>
+<comment>
+<name>Devlyn</name>
+<count>86</count>
+</comment>
+<comment>
+<name>Fyfe</name>
+<count>81</count>
+</comment>
+<comment>
+<name>Louis</name>
+<count>81</count>
+</comment>
+<comment>
+<name>Ross</name>
+<count>80</count>
+</comment>
+<comment>
+<name>Ariella</name>
+<count>78</count>
+</comment>
+<comment>
+<name>Aleksandrs</name>
+<count>75</count>
+</comment>
+<comment>
+<name>Petra</name>
+<count>75</count>
+</comment>
+<comment>
+<name>Daud</name>
+<count>74</count>
+</comment>
+<comment>
+<name>Sidonie</name>
+<count>71</count>
+</comment>
+<comment>
+<name>Seaan</name>
+<count>71</count>
+</comment>
+<comment>
+<name>Bradlie</name>
+<count>68</count>
+</comment>
+<comment>
+<name>Franklin</name>
+<count>66</count>
+</comment>
+<comment>
+<name>Ruadhan</name>
+<count>61</count>
+</comment>
+<comment>
+<name>Essa</name>
+<count>61</count>
+</comment>
+<comment>
+<name>Leyla</name>
+<count>60</count>
+</comment>
+<comment>
+<name>Orlaith</name>
+<count>55</count>
+</comment>
+<comment>
+<name>Kasi</name>
+<count>52</count>
+</comment>
+<comment>
+<name>Lydia</name>
+<count>52</count>
+</comment>
+<comment>
+<name>Jodie</name>
+<count>50</count>
+</comment>
+<comment>
+<name>Tanith</name>
+<count>49</count>
+</comment>
+<comment>
+<name>Luisa</name>
+<count>45</count>
+</comment>
+<comment>
+<name>Sayeed</name>
+<count>43</count>
+</comment>
+<comment>
+<name>Jak</name>
+<count>39</count>
+</comment>
+<comment>
+<name>Lybi</name>
+<count>37</count>
+</comment>
+<comment>
+<name>Adil</name>
+<count>37</count>
+</comment>
+<comment>
+<name>Julietta</name>
+<count>37</count>
+</comment>
+<comment>
+<name>Kaelum</name>
+<count>35</count>
+</comment>
+<comment>
+<name>Adenn</name>
+<count>30</count>
+</comment>
+<comment>
+<name>Rayane</name>
+<count>28</count>
+</comment>
+<comment>
+<name>Kadie</name>
+<count>28</count>
+</comment>
+<comment>
+<name>Mahasen</name>
+<count>28</count>
+</comment>
+<comment>
+<name>Babatunmise</name>
+<count>24</count>
+</comment>
+<comment>
+<name>Mirran</name>
+<count>20</count>
+</comment>
+<comment>
+<name>Abbigale</name>
+<count>17</count>
+</comment>
+<comment>
+<name>Neshawn</name>
+<count>17</count>
+</comment>
+<comment>
+<name>Suilven</name>
+<count>17</count>
+</comment>
+<comment>
+<name>Kerrie</name>
+<count>17</count>
+</comment>
+<comment>
+<name>Cirah</name>
+<count>16</count>
+</comment>
+<comment>
+<name>Kasper</name>
+<count>9</count>
+</comment>
+<comment>
+<name>Rhaeanna</name>
+<count>9</count>
+</comment>
+<comment>
+<name>Kamsiyochi</name>
+<count>6</count>
+</comment>
+<comment>
+<name>Antonio</name>
+<count>4</count>
+</comment>
+<comment>
+<name>Havila</name>
+<count>3</count>
+</comment>
+<comment>
+<name>Maksim</name>
+<count>3</count>
+</comment>
+<comment>
+<name>Chaela</name>
+<count>1</count>
+</comment>
+<comment>
+<name>Dillon</name>
+<count>1</count>
+</comment>
+</comments>
+</commentinfo>"""
+
+inputs = """<stuff>
+    <users>
+        <user x="2">
+            <id>001</id>
+            <name>Ifeanyi</name>
+        </user>
+        <user x="7">
+            <id>009</id>
+            <name>Okafor</name>
+        </user>
+    </users>
+</stuff>"""
+
+stuff = ET.fromstring(input)
+
+    # print('id: ', i.find('id').text)
+    # print('Attribute', i.get("x"))
+user = stuff.findall('comments/comment')
+print('User count:', len(user))
+digits = []
+for item in user: 
+    print('Name: ', item.find('name').text)
+    print('Number:',item.find('count').text)
+    digits.append(int(item.find('count').text))
+print(sum(digits))
