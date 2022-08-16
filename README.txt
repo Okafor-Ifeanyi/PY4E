@@ -1,4 +1,4 @@
-Python for Everybody is a 5 course Python specialization on python based on 5 major aspect
+Python for Everybody is a 5 based course Specialization on python with these major aspect
 as follows:
   1. Python for everyone - Introduction and basics with graded Assignments
   2. Data-Structure - Retaining data temporarily with lists, tupels and Dicts
@@ -6,9 +6,9 @@ as follows:
   4. Database - Database degign, Relational DB, Data Modeling and Permanent Storage of data in python using SQLlite(python emmbedded) 
   5. Capstone - A recape of all you've Completed in the course basic focuse on ASCII and Data_structure
   
-Course Instructor - DR Chuck Serverance
+Course Instructor - DR. Charles Severance, Clinical Professor, School ofInformation aka "Dr. Chuck"
 Host - University Of Mi0chigan
-Platform - coursera
+Platform - Coursera
 
 PERSONAL OPINION - This is my first Certified course ever taken so you should obviously take my words with a pile of salt...
 Education for me has always been something forced upon with a lot of rules and how to do things, paths you have to follow.., play is next to faliure..,
